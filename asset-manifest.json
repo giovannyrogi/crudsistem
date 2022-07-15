@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/crudsistem/static/css/main.4057a4ae.css",
+    "main.js": "/crudsistem/static/js/main.06991321.js",
+    "static/js/787.9c528654.chunk.js": "/crudsistem/static/js/787.9c528654.chunk.js",
+    "index.html": "/crudsistem/index.html",
+    "main.4057a4ae.css.map": "/crudsistem/static/css/main.4057a4ae.css.map",
+    "main.06991321.js.map": "/crudsistem/static/js/main.06991321.js.map",
+    "787.9c528654.chunk.js.map": "/crudsistem/static/js/787.9c528654.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4057a4ae.css",
+    "static/js/main.06991321.js"
+  ]
+}
