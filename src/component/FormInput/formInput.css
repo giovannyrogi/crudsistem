@@ -1,0 +1,22 @@
+.formInput{
+    margin-bottom: 10px;
+}
+input{
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+.txt-label{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+input:hover{
+    border: none;
+    border-radius: 8px;
+    box-shadow: -3px 3px 15px rgba(0, 0, 0, 0.687);
+}

@@ -20,29 +20,50 @@ import {
             FaEdit,
             FaRegEdit 
         } from "react-icons/fa";
+import { auth } from '../firebaseConfig';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+
 import InsertPage from './InsertData';
-import UpdateData from './UpdateData';
+import Login from './Login';
 
 
 const ListData = () => {
 
     const [listData, setListData] = useState([]);
     const [inserDataModal, setInserDataModal] = useState(false);
-    const [updateDataModal, setUpdateDataModal] = useState(false);
-    const [selectedData, setSelectedData] = useState([]);
-     
+    const [LoginModal, setLoginModal] = useState(true);
+    
+    const [user, setUser] = useState({});
+
     //mengambil ref data di database
     const listDataRef = collection(db, "daftartamu");
     
     //melakukan query data yang ada didatabase dan order by namalengkap
-    const q = query(listDataRef, orderBy('tanggal', "desc"), limit(10));
+    const q = query(listDataRef, orderBy('tanggal', "desc"));
 
     //useEffect akan lsng dijalankan saat page dibuka/reload
     useEffect(() => {
 
         getListData();
 
+        onAuthStateChanged(auth, (currentUser) => {
+            if(currentUser != "" && currentUser != null){
+                setUser(currentUser);
+                setLoginModal(false);
+            }
+            else{
+                setLoginModal(true);
+            }
+        });
     }, [])
+
+
+    //funsi untuk logout dari akun yg sedang login
+    const logout = async() => {
+        await signOut(auth);
+        setLoginModal(true);
+        
+    }
 
     //fungsi untuk query data pada tabel dengan menggunakan nama lengkap
     const searchData = async (value) => {
@@ -67,21 +88,6 @@ const ListData = () => {
         }
         else{
             getListData();
-        }
-        
-    }
-
-    //fungsi untuk edit data
-    const editData = (nama, hadir, id) => {
-        setSelectedData({
-            id : id,
-            namalengkap: nama,
-            kehadiran: hadir
-        });
-        console.log(selectedData);
-
-        if(selectedData !=''){
-            setUpdateDataModal(true);
         }
         
     }
@@ -133,16 +139,6 @@ const ListData = () => {
                                         <td>
                                             <div className='btn-aksicontainer'>
                                                 <button 
-                                                    className='btn-edit'
-                                                    onClick={() => {
-                                                        editData(data.namalengkap, data.hadirharike, data.id)
-                                                    }}
-                                                >
-                                                    <FaRegEdit 
-                                                        size={20}
-                                                    />
-                                                </button>
-                                                <button 
                                                     className='btn-trash'
                                                     onClick={() => {
                                                         deleteData(data.id);
@@ -181,15 +177,21 @@ const ListData = () => {
             {inserDataModal && <InsertPage closeModal={setInserDataModal} />}
 
             {/* logic untuk menampilkan update page jika nilai true */}
-            {updateDataModal && 
-            <UpdateData 
-                closeModal={setUpdateDataModal} 
-                selectedData={setSelectedData}
+            {LoginModal && 
+            <Login 
+                closeModal={setLoginModal}
             />}
 
-            {/* kode html yang akan tampil di web */}
             <div className='listdata-container'>
                 <div className='table-container'>
+                    <div className='topmenu-container'>
+                        <div className='user-container'>
+                            <h5> Akun Login : {user?.email}</h5>
+                        </div>
+                        <div className='logout-container'>
+                            <button className='btn-logout' onClick={logout}>Log Out</button>
+                        </div>
+                    </div>
                     <div className='header-container'>
                         <div className='btn-container'>
                             <button 
@@ -225,7 +227,6 @@ const ListData = () => {
                         </div>
                     </div>
                     <div className='list-data'>
-                    
                         <table>
                                 <thead>
                                     <tr>
