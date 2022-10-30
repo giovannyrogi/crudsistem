@@ -1,6 +1,12 @@
-# CRUD SISTEM KEHADIRAN KKR GEREJA
+# SISTEM KEHADIRAN KKR GEREJA
 <br>
+Link Preview Web : https://giovannyrogi.github.io/crudsistem/<br>
 <img src="https://github.com/giovannyrogi/crudsistem/blob/master/crud.png"/>
+<br>
+
+## Dikembangkan menggunakan :
+Bahasa pemrogramman HTML, CSS dan Javascript.
+Framework ReactJS
 
 # Getting Started with Create React App
 
