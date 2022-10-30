@@ -10,22 +10,7 @@ Link Preview Web : https://giovannyrogi.github.io/crudsistem/
 2. Framework  <strong><i>ReactJS</i></strong>
 3. Database menggunakan  <strong><i>Firebase(firestore database)</i></strong>.
 <br>
-## Library yang digunakan :
- <br>
-"dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "bootstrap": "^5.2.0-beta1",
-    "firebase": "^9.9.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  }
-  
- <br>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
