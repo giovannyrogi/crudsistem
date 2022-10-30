@@ -1,5 +1,5 @@
 # CRUD SISTEM KEHADIRAN KKR GEREJA
-<br></br>
+<br>
 <img src="https://github.com/giovannyrogi/crudsistem/blob/master/crud.png"/>
 
 # Getting Started with Create React App
