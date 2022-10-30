@@ -6,8 +6,11 @@ Link Preview Web : https://giovannyrogi.github.io/crudsistem/
 <br>
 
 ## Dikembangkan menggunakan :
-Bahasa pemrogramman HTML, CSS dan Javascript.
+Bahasa pemrogramman <i>HTML</i>, CSS dan Javascript.
+<br>
 Framework ReactJS
+<br>
+Database menggunakan Firebase(firestore database).
 
 # Getting Started with Create React App
 
