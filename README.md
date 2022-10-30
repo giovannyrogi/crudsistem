@@ -1,6 +1,7 @@
 # SISTEM KEHADIRAN KKR GEREJA
 <br>
-Link Preview Web : https://giovannyrogi.github.io/crudsistem/<br>
+Link Preview Web : https://giovannyrogi.github.io/crudsistem/
+<br><br>
 <img src="https://github.com/giovannyrogi/crudsistem/blob/master/crud.png"/>
 <br>
 
