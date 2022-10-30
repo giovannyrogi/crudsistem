@@ -1,5 +1,5 @@
-#CRUD SISTEM KEHADIRAN KKR GEREJA
-<br>
+# CRUD SISTEM KEHADIRAN KKR GEREJA
+<br></br>
 <img src="https://github.com/giovannyrogi/crudsistem/blob/master/crud.png"/>
 
 # Getting Started with Create React App
@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run:Cancel changes
 
 ### `npm start`
 
